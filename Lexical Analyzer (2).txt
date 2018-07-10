@@ -1,0 +1,236 @@
+#include <stdio.h>
+int main(){
+int a;
+int b;
+scanf("%d", &a);
+scanf("%d", &b);
+a=a/10+b;
+printf("%d",a);
+return 0;
+}
+
+
+
+
+
+Output of your Lexical Analyzer should be like:
+
+
+  Line=1
+  ______
+
+CONTENTS: #include <stdio.h>
+
+ TOKENS:
+ ------
+
+#               ----> SPECIAL CHARACTER
+
+INCLUDE                 ----> KEYWORD
+Space Removed
+
+<               ----> SPECIAL CHARACTER
+
+STDIO           ----> KEYWORD
+
+.               ----> SPECIAL CHARACTER
+
+H               ----> IDENTIFIER
+
+>               ----> SPECIAL CHARACTER
+
+-----------------------------------------------------------------------------
+
+  Line=2
+  ______
+
+CONTENTS: int main(){
+
+ TOKENS:
+ ------
+
+INT             ----> KEYWORD
+Space Removed
+
+MAIN            ----> KEYWORD
+
+(               ----> SPECIAL CHARACTER
+
+)               ----> SPECIAL CHARACTER
+
+{               ----> SPECIAL CHARACTER
+
+-----------------------------------------------------------------------------
+
+  Line=3
+  ______
+
+CONTENTS: int a;
+
+ TOKENS:
+ ------
+
+INT             ----> KEYWORD
+Space Removed
+
+A               ----> IDENTIFIER
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=4
+  ______
+
+CONTENTS: int b;
+
+ TOKENS:
+ ------
+
+INT             ----> KEYWORD
+Space Removed
+
+B               ----> IDENTIFIER
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=5
+  ______
+
+CONTENTS: scanf("%d", &a);
+
+ TOKENS:
+ ------
+
+SCANF           ----> KEYWORD
+
+(               ----> SPECIAL CHARACTER
+
+"               ----> SPECIAL CHARACTER
+%               ----> OPERATOR
+
+D               ----> IDENTIFIER
+
+"               ----> SPECIAL CHARACTER
+
+,               ----> SPECIAL CHARACTER
+Space Removed
+
+&               ----> SPECIAL CHARACTER
+
+A               ----> IDENTIFIER
+
+)               ----> SPECIAL CHARACTER
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=6
+  ______
+
+CONTENTS: scanf("%d", &b);
+
+ TOKENS:
+ ------
+
+SCANF           ----> KEYWORD
+
+(               ----> SPECIAL CHARACTER
+
+"               ----> SPECIAL CHARACTER
+%               ----> OPERATOR
+
+D               ----> IDENTIFIER
+
+"               ----> SPECIAL CHARACTER
+
+,               ----> SPECIAL CHARACTER
+Space Removed
+
+&               ----> SPECIAL CHARACTER
+
+B               ----> IDENTIFIER
+
+)               ----> SPECIAL CHARACTER
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=7
+  ______
+
+CONTENTS: a=a/10+b;
+
+ TOKENS:
+ ------
+
+A               ----> IDENTIFIER
+=               ----> OPERATOR
+
+A               ----> IDENTIFIER
+/               ----> OPERATOR
+
+10              ----> CONSTANT
++               ----> OPERATOR
+
+B               ----> IDENTIFIER
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=8
+  ______
+
+CONTENTS: printf("%d",a);
+
+ TOKENS:
+ ------
+
+PRINTF          ----> KEYWORD
+
+(               ----> SPECIAL CHARACTER
+
+"               ----> SPECIAL CHARACTER
+%               ----> OPERATOR
+
+D               ----> IDENTIFIER
+
+"               ----> SPECIAL CHARACTER
+
+,               ----> SPECIAL CHARACTER
+
+A               ----> IDENTIFIER
+
+)               ----> SPECIAL CHARACTER
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=9
+  ______
+
+CONTENTS: return 0;
+
+ TOKENS:
+ ------
+
+RETURN          ----> KEYWORD
+Space Removed
+
+0               ----> CONSTANT
+;               ----> DELIMITER
+
+-----------------------------------------------------------------------------
+
+  Line=10
+  ______
+
+CONTENTS: }
+
+ TOKENS:
+ ------
+
+}               ----> SPECIAL CHARACTER
+
+Process returned 0 (0x0)   execution time : 0.250 s
+Press any key to continue.
